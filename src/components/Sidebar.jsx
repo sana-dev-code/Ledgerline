@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { ROLE_TABS, can } from "../constants/permissions";
 import { useApp } from "../hooks/useApp";
 
 export default function Sidebar({ route, go, close, search, setSearch }) {
   const { state, dispatch } = useApp();
+  const [showSearch, setShowSearch] = useState(false);
+
   const user = state.users.find((u) => u.id === state.userId);
   const client = state.clients.find((c) => c.id === state.clientId);
   const tabs = ROLE_TABS[user.role] || [];
@@ -14,6 +17,12 @@ export default function Sidebar({ route, go, close, search, setSearch }) {
   function openTab(tab) {
     go(tab);
     close?.();
+  }
+
+  function chooseClient(id) {
+    dispatch({ type: "CLIENT", id });
+    setSearch("");
+    setShowSearch(false);
   }
 
   return (
@@ -33,7 +42,7 @@ export default function Sidebar({ route, go, close, search, setSearch }) {
           onChange={(e) => dispatch({ type: "CLIENT", id: e.target.value })}
           className="mt-2 w-full rounded-xl border-0 bg-white px-3 py-2 text-sm font-semibold outline-none"
         >
-          {clients.map((c) => (
+          {state.clients.map((c) => (
             <option key={c.id} value={c.id}>
               {state.pinnedClients.includes(c.id) ? "Pinned - " : ""}
               {c.name}
@@ -42,12 +51,41 @@ export default function Sidebar({ route, go, close, search, setSearch }) {
         </select>
       </div>
 
-      <input
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        placeholder="Search client"
-        className="mt-4 w-full rounded-2xl border-0 bg-slate-50 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-blue-100"
-      />
+      <div className="relative mt-4">
+        <input
+          value={search}
+          onFocus={() => setShowSearch(true)}
+          onChange={(e) => {
+            setSearch(e.target.value);
+            setShowSearch(true);
+          }}
+          placeholder="Search client"
+          className="w-full rounded-2xl border-0 bg-slate-50 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-blue-100"
+        />
+
+        {showSearch && search.trim() && (
+          <div className="absolute left-0 right-0 top-14 z-50 rounded-2xl bg-white p-2 shadow-xl ring-1 ring-slate-100">
+            {clients.length ? (
+              clients.map((c) => (
+                <button
+                  key={c.id}
+                  onClick={() => chooseClient(c.id)}
+                  className="w-full rounded-xl px-3 py-3 text-left text-sm font-bold text-slate-700 hover:bg-blue-50 hover:text-blue-700"
+                >
+                  {c.name}
+                  <span className="block text-xs font-medium text-slate-400">
+                    {c.industry}
+                  </span>
+                </button>
+              ))
+            ) : (
+              <p className="rounded-xl px-3 py-3 text-sm text-slate-500">
+                No client found
+              </p>
+            )}
+          </div>
+        )}
+      </div>
 
       {can(user.role, "pinClient") && (
         <button
@@ -88,7 +126,7 @@ export default function Sidebar({ route, go, close, search, setSearch }) {
 
         <button
           onClick={() => dispatch({ type: "LOGOUT" })}
-          className="mt-4 mb-8 w-full rounded-2xl bg-slate-900 px-5 py-3 text-sm font-bold text-white "
+          className="mt-4 mb-8 w-full rounded-2xl bg-slate-900 px-5 py-3 text-sm font-bold text-white"
         >
           Logout
         </button>
