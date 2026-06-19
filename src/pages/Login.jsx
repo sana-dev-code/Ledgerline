@@ -25,8 +25,8 @@ export default function Login({ go }) {
   }
 
   return (
-    <main className="grid min-h-screen place-items-center bg-[#f7f9fc] p-4">
-      <section className="grid w-full max-w-5xl overflow-hidden rounded-[2rem] bg-white shadow-xl lg:grid-cols-[1fr_420px]">
+    <main className="min-h-screen bg-[#f7f9fc] px-4 py-8 lg:grid lg:place-items-center">
+      <section className="mx-auto w-full max-w-5xl overflow-hidden rounded-[2rem] bg-white shadow-xl lg:grid lg:grid-cols-[1fr_420px]">
         <div className="hidden bg-gradient-to-br from-blue-600 via-sky-500 to-violet-500 p-10 text-white lg:block">
           <h1 className="text-4xl font-black">Ledgerline</h1>
           <p className="mt-4 max-w-md text-blue-50">
@@ -44,9 +44,19 @@ export default function Login({ go }) {
             ))}
           </div>
         </div>
+        
+        <form onSubmit={submit} className="p-6 sm:p-8 lg:p-10">
 
-        <form onSubmit={submit} className="p-8 lg:p-10">
-          <h2 className="text-3xl font-black text-slate-900">Sign in</h2>
+  <div className="mb-8 lg:hidden">
+    <h1 className="text-3xl font-black text-blue-600">Ledgerline</h1>
+    <p className="mt-2 text-sm text-slate-500">
+      Financial workspace for accounting teams.
+    </p>
+  </div>
+
+  <h2 className="text-3xl font-black text-slate-900">
+    Sign in
+  </h2>
           <p className="mt-2 text-sm text-slate-500">
             Use demo credentials to access the workspace.
           </p>

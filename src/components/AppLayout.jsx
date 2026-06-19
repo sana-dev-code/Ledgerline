@@ -21,7 +21,7 @@ export default function AppLayout({ children, route, go }) {
             onClick={() => setOpen(false)}
           />
 
-          <div className="relative h-full w-[232px] max-w-[84vw] overflow-y-auto bg-white px-4 py-6 shadow-2xl">
+          <div className="relative h-full w-[300px] max-w-[86vw] overflow-y-auto bg-white px-5 py-6 shadow-2xl">
             <Sidebar
               route={route}
               go={go}
@@ -33,7 +33,7 @@ export default function AppLayout({ children, route, go }) {
         </div>
       )}
 
-      <main className="min-w-0 overflow-hidden px-4 py-5 lg:ml-[232px] lg:px-8 lg:py-6">
+      <main className="min-w-0 overflow-hidden px-4 py-4 lg:ml-[232px] lg:px-8 lg:py-6">
         <div className="mx-auto max-w-[1180px]">
           <Topbar route={route} openMenu={() => setOpen(true)} />
 
