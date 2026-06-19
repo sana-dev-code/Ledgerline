@@ -1,0 +1,82 @@
+[
+  {
+    "id": "b1",
+    "clientId": "acme",
+    "date": "Jun 14",
+    "name": "OFFICE DEPOT #4521",
+    "amount": -284.5,
+    "score": "98%"
+  },
+  {
+    "id": "b2",
+    "clientId": "acme",
+    "date": "Jun 16",
+    "name": "WIRE TRANSFER ABC CO",
+    "amount": 4200,
+    "score": "95%"
+  },
+  {
+    "id": "b3",
+    "clientId": "acme",
+    "date": "Jun 18",
+    "name": "DEPOSIT REF 88231",
+    "amount": 750,
+    "score": "Split"
+  },
+  {
+    "id": "b4",
+    "clientId": "acme",
+    "date": "Jun 19",
+    "name": "DEPOSIT REF 88232",
+    "amount": 750,
+    "score": "Split"
+  },
+  {
+    "id": "b5",
+    "clientId": "metro",
+    "date": "Jun 12",
+    "name": "SUPPLIER PAYMENT",
+    "amount": -3400,
+    "score": "99%"
+  },
+  {
+    "id": "b6",
+    "clientId": "metro",
+    "date": "Jun 13",
+    "name": "CASH DEPOSIT",
+    "amount": 2200,
+    "score": "96%"
+  },
+  {
+    "id": "b7",
+    "clientId": "metro",
+    "date": "Jun 16",
+    "name": "STORAGE RENT",
+    "amount": -950,
+    "score": "94%"
+  },
+  {
+    "id": "b8",
+    "clientId": "tech",
+    "date": "Jun 10",
+    "name": "AMAZON WEB SERVICES",
+    "amount": -1200,
+    "score": "100%"
+  },
+  {
+    "id": "b9",
+    "clientId": "tech",
+    "date": "Jun 11",
+    "name": "WIRE SAAS CLIENT",
+    "amount": 9800,
+    "score": "97%"
+  },
+  {
+    "id": "b10",
+    "clientId": "tech",
+    "date": "Jun 17",
+    "name": "CONTRACTOR PAYOUT",
+    "amount": -2500,
+    "score": "93%"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "acme",
+    "name": "ACME Retail LLC",
+    "industry": "Retail",
+    "assets": 732000,
+    "netIncome": 30500,
+    "health": "Healthy"
+  },
+  {
+    "id": "metro",
+    "name": "Metro Foods",
+    "industry": "Food Distribution",
+    "assets": 382000,
+    "netIncome": 18000,
+    "health": "Needs Review"
+  },
+  {
+    "id": "tech",
+    "name": "TechSoft Ltd",
+    "industry": "SaaS",
+    "assets": 543000,
+    "netIncome": 64000,
+    "health": "Strong"
+  }
+]

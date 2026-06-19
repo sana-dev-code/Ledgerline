@@ -1,0 +1,23 @@
+[
+  {
+    "id": 101,
+    "clientId": "acme",
+    "entity": "Unknown Deposit",
+    "status": "Open",
+    "note": "Cannot identify source, possible split."
+  },
+  {
+    "id": 102,
+    "clientId": "metro",
+    "entity": "Food Supplier",
+    "status": "In Review",
+    "note": "Supplier invoice needs confirmation."
+  },
+  {
+    "id": 103,
+    "clientId": "tech",
+    "entity": "Contractor Payout",
+    "status": "Open",
+    "note": "Missing approval record."
+  }
+]

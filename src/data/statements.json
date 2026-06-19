@@ -1,0 +1,95 @@
+{
+  "acme": {
+    "balance": [
+      ["Assets", "", "", ""],
+      ["Cash", 125000, 118000, "+5.9%"],
+      ["Accounts Receivable", 82000, 79000, "+3.8%"],
+      ["Inventory", 145000, 151000, "-4.0%"],
+      ["Equipment", 380000, 380000, "0%"],
+
+      ["Liabilities", "", "", ""],
+      ["Accounts Payable", 62000, 59000, "+5.1%"],
+      ["Bank Loan", 180000, 185000, "-2.7%"],
+
+      ["Equity", "", "", ""],
+      ["Owner Equity", 490000, 484000, "+1.2%"]
+    ],
+
+    "income": [
+      ["Revenue", 285000, 271000, "+5.2%"],
+      ["COGS", -142000, -139000, "+2.1%"],
+      ["Gross Profit", 143000, 132000, "+8.3%"],
+      ["Operating Expenses", -98000, -94000, "+4.3%"],
+      ["Net Income", 45000, 38000, "+18.4%"]
+    ],
+
+    "cash": [
+      ["Operating Activities", 72000],
+      ["Investing Activities", -14000],
+      ["Financing Activities", -10000],
+      ["Net Cash Flow", 48000]
+    ]
+  },
+
+  "metro": {
+    "balance": [
+      ["Assets", "", "", ""],
+      ["Cash", 62000, 70000, "-11.4%"],
+      ["Accounts Receivable", 38000, 35000, "+8.6%"],
+      ["Inventory", 98000, 94000, "+4.2%"],
+
+      ["Liabilities", "", "", ""],
+      ["Accounts Payable", 44000, 39000, "+12.8%"],
+      ["Short Term Debt", 60000, 62000, "-3.2%"],
+
+      ["Equity", "", "", ""],
+      ["Owner Equity", 94000, 98000, "-4.1%"]
+    ],
+
+    "income": [
+      ["Revenue", 180000, 174000, "+3.4%"],
+      ["COGS", -116000, -110000, "+5.4%"],
+      ["Gross Profit", 64000, 64000, "0%"],
+      ["Operating Expenses", -48000, -45000, "+6.7%"],
+      ["Net Income", 16000, 19000, "-15.8%"]
+    ],
+
+    "cash": [
+      ["Operating Activities", 18000],
+      ["Investing Activities", -4000],
+      ["Financing Activities", -2000],
+      ["Net Cash Flow", 12000]
+    ]
+  },
+
+  "tech": {
+    "balance": [
+      ["Assets", "", "", ""],
+      ["Cash", 210000, 190000, "+10.5%"],
+      ["Accounts Receivable", 94000, 82000, "+14.6%"],
+      ["Software Assets", 165000, 160000, "+3.1%"],
+
+      ["Liabilities", "", "", ""],
+      ["Accounts Payable", 28000, 25000, "+12.0%"],
+      ["Deferred Revenue", 78000, 69000, "+13.0%"],
+
+      ["Equity", "", "", ""],
+      ["Retained Earnings", 363000, 338000, "+7.4%"]
+    ],
+
+    "income": [
+      ["Revenue", 420000, 380000, "+10.5%"],
+      ["Infrastructure", -52000, -48000, "+8.3%"],
+      ["Gross Profit", 368000, 332000, "+10.8%"],
+      ["Operating Expenses", -280000, -260000, "+7.7%"],
+      ["Net Income", 88000, 72000, "+22.2%"]
+    ],
+
+    "cash": [
+      ["Operating Activities", 102000],
+      ["Investing Activities", -22000],
+      ["Financing Activities", -18000],
+      ["Net Cash Flow", 62000]
+    ]
+  }
+}

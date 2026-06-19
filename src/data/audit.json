@@ -1,0 +1,20 @@
+[
+  {
+    "id": 301,
+    "clientId": "acme",
+    "text": "Sarah reviewed AR drill-down.",
+    "at": "Jun 18, 10:32 AM"
+  },
+  {
+    "id": 302,
+    "clientId": "metro",
+    "text": "Marcus flagged supplier transaction.",
+    "at": "Jun 18, 11:05 AM"
+  },
+  {
+    "id": 303,
+    "clientId": "tech",
+    "text": "System generated monthly statement.",
+    "at": "Jun 19, 09:15 AM"
+  }
+]
